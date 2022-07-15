@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
+import 'GenderIcons.dart';
+import 'ReusableCards.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+const double bottomContainerHeight = 80;
+const Color bottomContainerColor = Color(0xFFEB1555);
+const Color reusableCardColor = Color(0xFF1D1E33);
 
 class InputPage extends StatefulWidget {
   const InputPage({Key? key}) : super(key: key);
@@ -17,15 +23,61 @@ class _InputPageState extends State<InputPage> {
           child: Text('BMI CALCULATOR'),
         ),
       ),
-      body: Center(
-        child: Text('Body Text'),
-      ),
-      floatingActionButton: Theme(
-        data: ThemeData.dark(),
-        child: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: () => InputPage(),
-        ),
+      body: Column(
+        children: [
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: ReusableCard(
+                    colour: reusableCardColor,
+                    cardChild: GenderIcons(
+                        genderIcon: FontAwesomeIcons.mars, genterText: 'Male'),
+                  ),
+                ),
+                Expanded(
+                  child: ReusableCard(
+                    colour: reusableCardColor,
+                    cardChild: GenderIcons(
+                        genderIcon: FontAwesomeIcons.venus,
+                        genterText: 'Female'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: ReusableCard(
+                    colour: reusableCardColor,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: ReusableCard(
+                    colour: reusableCardColor,
+                  ),
+                ),
+                Expanded(
+                  child: ReusableCard(
+                    colour: reusableCardColor,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            color: bottomContainerColor,
+            height: bottomContainerHeight,
+          )
+        ],
       ),
     );
   }
