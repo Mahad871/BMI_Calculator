@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-const Color cardTextColor = Color(0xFF8D8E98);
+import 'constants.dart';
 
 class GenderIcons extends StatelessWidget {
   final IconData genderIcon;
@@ -21,7 +20,7 @@ class GenderIcons extends StatelessWidget {
         ),
         Text(
           genterText,
-          style: TextStyle(fontSize: 18, color: cardTextColor),
+          style: kCardTextStyle,
         ),
       ],
     );
