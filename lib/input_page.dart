@@ -3,6 +3,7 @@ import 'GenderIcons.dart';
 import 'ReusableCards.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'constants.dart';
+import 'RoundButtonCustom.dart';
 
 enum GenderType { male, female }
 
@@ -66,19 +67,21 @@ class _InputPageState extends State<InputPage> {
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        SizedBox(height: 10),
                         Text(
                           'Height',
                           style: kCardTextStyle,
                         ),
+                        SizedBox(height: 5),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
                               kHeightSlider.toString(),
-                              style: kNumberTextStyle,
+                              style: kNumberTextStyleSlider,
                             ),
                             SizedBox(
-                              width: 0,
+                              width: 2,
                             ),
                             Column(
                               children: [
@@ -86,7 +89,7 @@ class _InputPageState extends State<InputPage> {
                                   height: 30,
                                 ),
                                 Text(
-                                  'CM',
+                                  'cm',
                                   style: kCardTextStyle,
                                 ),
                               ],
@@ -126,17 +129,80 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     colour: kActiveReusableCardColor,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Weight', style: kCardTextStyle),
+                        Text(kWeight.toString(), style: kNumberTextStyle),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            MyRoundButton(
+                              buttonIcon: Icons.remove,
+                              onPress: () {
+                                setState(() {
+                                  kWeight--;
+                                });
+                              },
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            MyRoundButton(
+                              buttonIcon: Icons.add,
+                              onPress: () {
+                                setState(() {
+                                  kWeight++;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
                     colour: kActiveReusableCardColor,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Age', style: kCardTextStyle),
+                        Text(kAge.toString(), style: kNumberTextStyle),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            MyRoundButton(
+                              buttonIcon: Icons.remove,
+                              onPress: () {
+                                setState(() {
+                                  kAge--;
+                                });
+                              },
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            MyRoundButton(
+                              buttonIcon: Icons.add,
+                              onPress: () {
+                                setState(() {
+                                  kAge++;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
             ),
           ),
           Container(
+            margin: const EdgeInsets.only(top: 15),
             color: kBottomContainerColor,
             height: kBottomContainerHeight,
           )
