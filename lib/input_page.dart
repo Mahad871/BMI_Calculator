@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'GenderIcons.dart';
-import 'SliderWidget.dart';
 import 'ReusableCards.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'constants.dart';
