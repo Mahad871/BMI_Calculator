@@ -14,6 +14,8 @@ const TextStyle kNumberTextStyleSlider =
     TextStyle(fontSize: 70.0, fontWeight: FontWeight.w900);
 const TextStyle kNumberTextStyle =
     TextStyle(fontSize: 60.0, fontWeight: FontWeight.w900);
+const TextStyle kBottomTextStyle =
+    TextStyle(fontSize: 22.0, fontWeight: FontWeight.w500);
 
 int kHeightSlider = 180, kWeight = 69, kAge = 18;
 double kMaxSlider = 220, kMinSlider = 120;

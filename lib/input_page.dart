@@ -202,9 +202,26 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(top: 15),
-            color: kBottomContainerColor,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(20), topLeft: Radius.circular(20)),
+              color: kBottomContainerColor,
+            ),
+            margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+            padding: EdgeInsets.all(20),
             height: kBottomContainerHeight,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: Text(
+                    'CALCULATE BMI',
+                    style: kBottomTextStyle,
+                  ),
+                ),
+              ],
+            ),
           )
         ],
       ),
