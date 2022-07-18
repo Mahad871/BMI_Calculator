@@ -201,26 +201,30 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(20), topLeft: Radius.circular(20)),
-              color: kBottomContainerColor,
-            ),
-            margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-            padding: EdgeInsets.all(20),
-            height: kBottomContainerHeight,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Center(
-                  child: Text(
-                    'CALCULATE BMI',
-                    style: kBottomTextStyle,
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, '/result'),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(30),
+                    topLeft: Radius.circular(30)),
+                color: kBottomContainerColor,
+              ),
+              margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+              padding: EdgeInsets.all(20),
+              height: kBottomContainerHeight,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Center(
+                    child: Text(
+                      'CALCULATE',
+                      style: kBottomTextStyle,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           )
         ],

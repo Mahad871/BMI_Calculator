@@ -10,6 +10,9 @@ const Color kCardTextColor = Color(0xFF8D8E98);
 const TextStyle kCardTextStyle =
     TextStyle(fontSize: 20, color: kCardTextColor, fontWeight: FontWeight.bold);
 
+const TextStyle kNumberTextStyleResult =
+    TextStyle(fontSize: 130.0, fontWeight: FontWeight.w900);
+
 const TextStyle kNumberTextStyleSlider =
     TextStyle(fontSize: 70.0, fontWeight: FontWeight.w900);
 const TextStyle kNumberTextStyle =

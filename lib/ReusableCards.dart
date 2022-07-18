@@ -5,8 +5,15 @@ class ReusableCard extends StatelessWidget {
   final Color colour;
   final Widget? cardChild;
   final VoidCallback? onPress;
+  final double cardMargin;
+  final double cardPaddinng;
 
-  ReusableCard({required this.colour, this.cardChild, this.onPress});
+  ReusableCard(
+      {required this.colour,
+      this.cardChild,
+      this.onPress,
+      this.cardMargin = 10,
+      this.cardPaddinng = 0});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -20,7 +27,8 @@ class ReusableCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             color: colour,
           ),
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(cardMargin),
+          padding: EdgeInsets.only(top: cardPaddinng, bottom: cardPaddinng),
         ),
       ),
     );
