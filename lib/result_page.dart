@@ -37,7 +37,7 @@ class ResultPage extends StatelessWidget {
             ),
             Expanded(
               child: ReusableCard(
-                cardMargin: 20,
+                cardMargin: 10,
                 colour: kActiveReusableCardColor,
                 cardChild: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
