@@ -76,6 +76,8 @@ class ResultPage extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(30),
+                      bottomLeft: Radius.circular(30),
                       topRight: Radius.circular(30),
                       topLeft: Radius.circular(30)),
                   color: kBottomContainerColor,
